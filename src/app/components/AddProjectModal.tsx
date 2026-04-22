@@ -17,7 +17,7 @@ export function AddProjectModal({ isOpen, onClose, onSubmit }: AddProjectModalPr
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [tags, setTags] = useState('');
-  const [status, setStatus] = useState<ProjectStatus>('Planning');
+  const [status, setStatus] = useState<ProjectStatus>('Idea');
   const [isLoading, setIsLoading] = useState(false);
 
   if (!isOpen) return null;
@@ -202,11 +202,12 @@ export function AddProjectModal({ isOpen, onClose, onSubmit }: AddProjectModalPr
               onFocus={(e) => (e.target.style.borderColor = '#525252')}
               onBlur={(e) => (e.target.style.borderColor = 'var(--border)')}
             >
-              <option value="Planning">Planning</option>
-              <option value="Active">Active</option>
-              <option value="Paused">Paused</option>
-              <option value="Complete">Complete</option>
-              <option value="Abandoned">Abandoned</option>
+              <option value="Idea">💡 Idea</option>
+              <option value="Planning">🔵 Planning</option>
+              <option value="Active">🟢 Active</option>
+              <option value="Paused">🟡 Paused</option>
+              <option value="Complete">✅ Complete</option>
+              <option value="Scrapped">❌ Scrapped</option>
             </select>
           </div>
 

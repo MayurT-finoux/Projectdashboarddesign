@@ -17,21 +17,21 @@ const mockProjects: Project[] = [
   },
   {
     id: '2',
-    name: 'dashboard-redesign',
-    description: 'Complete redesign of admin dashboard with new component library and dark mode support.',
-    status: 'Planning',
-    tags: ['#frontend', '#react', '#design'],
-    startedDate: '2026-03-15',
-    lastUpdated: '2026-04-17',
-  },
-  {
-    id: '3',
     name: 'mobile-app-mvp',
     description: 'Initial MVP for iOS and Android. Focus on core features: auth, profile, and basic functionality.',
     status: 'Paused',
     tags: ['#mobile', '#react-native'],
     startedDate: '2026-02-20',
     lastUpdated: '2026-04-10',
+  },
+  {
+    id: '3',
+    name: 'authentication-system',
+    description: 'OAuth 2.0 implementation with JWT tokens and refresh token rotation for enhanced security.',
+    status: 'Complete',
+    tags: ['#backend', '#security', '#auth'],
+    startedDate: '2026-01-10',
+    lastUpdated: '2026-03-28',
   },
 ];
 
@@ -77,7 +77,8 @@ export default function App() {
     Active: projects.filter((p) => p.status === 'Active').length,
     Paused: projects.filter((p) => p.status === 'Paused').length,
     Complete: projects.filter((p) => p.status === 'Complete').length,
-    Abandoned: projects.filter((p) => p.status === 'Abandoned').length,
+    Scrapped: projects.filter((p) => p.status === 'Scrapped').length,
+    Idea: projects.filter((p) => p.status === 'Idea').length,
   };
 
   return (
@@ -150,11 +151,20 @@ export default function App() {
           </div>
           <div className="w-px h-4 bg-zinc-700" />
           <div className="flex items-center gap-2">
-            <span style={{ color: 'var(--text-secondary)' }}>Abandoned:</span>
+            <span style={{ color: 'var(--text-secondary)' }}>Scrapped:</span>
             <span
               style={{ color: 'var(--text-primary)', fontWeight: 600 }}
             >
-              {stats.Abandoned}
+              {stats.Scrapped}
+            </span>
+          </div>
+          <div className="w-px h-4 bg-zinc-700" />
+          <div className="flex items-center gap-2">
+            <span style={{ color: 'var(--text-secondary)' }}>Idea:</span>
+            <span
+              style={{ color: 'var(--text-primary)', fontWeight: 600 }}
+            >
+              {stats.Idea}
             </span>
           </div>
         </div>

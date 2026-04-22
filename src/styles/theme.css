@@ -14,14 +14,16 @@
   /* Status Colors - Dark Theme */
   --status-active-bg: #14532d;
   --status-active-text: #86efac;
-  --status-planning-bg: #1e3a8a;
-  --status-planning-text: #93c5fd;
   --status-paused-bg: #713f12;
   --status-paused-text: #fde047;
+  --status-planning-bg: #1e3a8a;
+  --status-planning-text: #93c5fd;
   --status-complete-bg: #27272a;
   --status-complete-text: #d4d4d8;
-  --status-abandoned-bg: #7f1d1d;
-  --status-abandoned-text: #fca5a5;
+  --status-scrapped-bg: #7f1d1d;
+  --status-scrapped-text: #fca5a5;
+  --status-idea-bg: #4c1d95;
+  --status-idea-text: #c4b5fd;
 
   /* Original tokens for compatibility */
   --background: #ffffff;
